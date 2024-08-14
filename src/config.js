@@ -4,17 +4,17 @@ module.exports = {
     botVersion: "BETA-v1.1.0",
     
     // BOT INFO //
-    prefix: "t?", // Default prefix
+    prefix: "?", // Default prefix
     status: "dnd",
     eventListeners: 100,
-    dev: "Kkermit",
-    devBy: "| Developed by kkermit",
-    developers: "526853643962679323",
+    dev: ".huts.",
+    devBy: "| Developed by Huts",
+    developers: "980910907695722568",
     noPerms: `You **do not** have the required permissions to use this command!`,
     ownerOnlyCommand: `This command is **only** available for the owner of the bot!`,
     filterMessage: "Your message includes profanity which is **not** allowed!",
-    botInvite: "https://discord.com/oauth2/authorize?client_id=1211784897627168778&permissions=8&scope=bot%20applications.commands",
-    botServerInvite: "https://discord.gg/xcMVwAVjSD",
+    botInvite: "https://discord.com/oauth2/authorize?client_id=1273317561747902515",
+    botServerInvite: "https://discord.gg/zFVTE5qkbp",
 
     // EMBED COLORS //
     embedColor: "Blurple",
@@ -53,13 +53,13 @@ module.exports = {
     musicEmojiError: "❌",
 
     // CHANNEL IDS //
-    slashCommandLoggingChannel: "1238869804744441896", // slash command logging channel
-    prefixCommandLoggingChannel: "1241592178480775188", // Prefix command logging channel
-    suggestionChannel: "1240335460463677503", // Suggestion channel
-    bugReportChannel: "1240341717031456840", // Bug report channel
-    botLeaveChannel: "1139731092329480332", // Logging channel for bot leaving servers
-    botJoinChannel: "1240480049681928203", // Logging channel for bot joining servers
-    commandErrorChannel: "1240912641719930970", // Logging channel for command errors
+    slashCommandLoggingChannel: "1255219987833163877", // slash command logging channel
+    prefixCommandLoggingChannel: "1255219962080133200", // Prefix command logging channel
+    suggestionChannel: "1253764481033568277", // Suggestion channel
+    bugReportChannel: "1253719805194666114", // Bug report channel
+    botLeaveChannel: "1255220259653419008", // Logging channel for bot leaving servers
+    botJoinChannel: "1254897835304943717", // Logging channel for bot joining servers
+    commandErrorChannel: "1273336191210754110", // Logging channel for command errors
 
     // Ticket Configuration //
     ticketName: 'ticket-',
@@ -100,4 +100,3 @@ module.exports = {
     ticketMemberAdd: 'has been added to the ticket.',
     ticketMemberRemove: 'has been removed from the ticket.',
 }
-
