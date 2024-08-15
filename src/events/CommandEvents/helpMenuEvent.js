@@ -693,7 +693,7 @@ module.exports = {
                         .addFields({ name: `• ${guildPrefix}lb`, value: `> Displays the server leaderboard.` })
                         .addFields({ name: `• ${guildPrefix}rank`, value: `> Displays a users rank.` })
 
-                        .setImage('https://i.postimg.cc/TPTDJZt7/Screenshot-2024-06-22-211847.png')
+                        .setImage('https://i.imgur.com/2NZU98q.png')
                         .setTimestamp();
 
                     const pcommandpage1 = new EmbedBuilder()
@@ -729,7 +729,7 @@ module.exports = {
                         .addFields({ name: `• ${guildPrefix}stop`, value: `> Stops the music.` })
                         .addFields({ name: `• ${guildPrefix}volume`, value: `> Changes the music volume.` })
 
-                        .setImage('https://i.postimg.cc/TPTDJZt7/Screenshot-2024-06-22-211847.png')
+                        .setImage('https://i.imgur.com/2NZU98q.png')
                         .setTimestamp();
 
                     const pcommandbuttons = new ActionRowBuilder()

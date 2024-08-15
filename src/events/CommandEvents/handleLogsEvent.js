@@ -20,24 +20,42 @@ function handleLogs(client) {
         });
     }
 
-    client.on("messageDelete", function (message) {
-        // Return if the message is from a guild the bot doesn't have access to, if the author is a bot, or if the message has no content
-        if (!message.guild || message.author.bot || !message.content) return;
-    
-        const embed = new EmbedBuilder()
-            .setTitle(`${client.user.username} logging system ${client.config.arrowEmoji}`)
-            .setDescription(`${client.config.auditLogEmoji} __Message Deleted__`)
-            .setColor('DarkRed')
-            .setTimestamp()
-            .addFields({ name: `Author`, value: `> <@${message.author.id}> - *${message.author.tag}*` })
-            .addFields({ name: `Channel`, value: `> ${message.channel}` })
-            .addFields({ name: `Deleted Message`, value: `> ${message.content}` })
-            .setThumbnail(client.user.avatarURL())
-            .setAuthor({ name: `Logging System ${client.config.devBy}` })
-            .setFooter({ text: `Message Deleted` });
-    
-        // Send the log
-        return send_log(message.guild.id, embed);
+    client.on("messageDelete", async function (message) {
+        try {
+            if (!message.guild || message.author.bot) return;
+            
+            const embed = new EmbedBuilder()
+                .setTitle(`${client.user.username} logging system ${client.config.arrowEmoji}`)
+                .setDescription(`${client.config.auditLogEmoji} __Message Deleted__`)
+                .setColor('DarkRed')
+                .setTimestamp()
+                .addFields({ name: `Author`, value: `> <@${message.author.id}> - *${message.author.tag}*`})
+                .addFields({ name: `Channel`, value: `> ${message.channel}`})
+                .setThumbnail(client.user.avatarURL())
+                .setAuthor({ name: `Logging System ${client.config.devBy}` })
+                .setFooter({ text: `Message Deleted` });
+
+            if (message.content) {
+                embed.addFields({ name: `Deleted Message`, value: `> ${message.content}` });
+            } else {
+                embed.addFields({ name: `Deleted Message`, value: '> [No text content]' });
+            }
+
+            if (message.attachments.size > 0) {
+                message.attachments.forEach(attachment => {
+                    if (attachment.contentType && attachment.contentType.startsWith('image/')) {
+                        embed.addFields({ name: `Attachment`, value: `> Image` });
+                        embed.setImage(attachment.url);
+                    } else {
+                        embed.addFields({ name: `Attachment`, value: `> [Non-image attachment: ${attachment.name}]` });
+                    }
+                });
+            }
+ 
+            return send_log(message.guild.id, embed);
+        } catch (err) {
+            client.logs.error(`[AUDIT_LOGGING] Couldn't log deleted message. Message content: ${message.content}`);
+        }
     });
     
 
