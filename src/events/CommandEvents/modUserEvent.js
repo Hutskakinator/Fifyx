@@ -1,5 +1,3 @@
-// Modified using AI.
-
 module.exports = (client) => {
     const rulesCache = new Map();
     const lastFetchCache = new Map();
@@ -15,12 +13,12 @@ module.exports = (client) => {
         if (!guild) return [];
 
         try {
-            const automodRule = await guild.autoModerationRules.fetch('automod-rule-id');
-            if (!automodRule || !automodRule.triggerMetadata.keywordFilter) return [];
-
-            const rules = automodRule.triggerMetadata.keywordFilter.map(keyword =>
-                new RegExp(keyword.replace('*', '.*'), 'i')
-            );
+            const automodRules = await guild.autoModerationRules.fetch(); // Fetch all AutoMod rules for the guild
+            const rules = automodRules.map(rule =>
+                rule.triggerMetadata.keywordFilter.map(keyword =>
+                    new RegExp(keyword.replace('*', '.*'), 'i')
+                )
+            ).flat();
 
             rulesCache.set(guildId, rules);
             lastFetchCache.set(guildId, Date.now());
