@@ -10,6 +10,7 @@ loadEnvironment();
 const currentVersion = `${config.botVersion}`;
 
 // Logging Effects //
+<<<<<<< HEAD
 const color = {
     red: '\x1b[31m',
     orange: '\x1b[38;5;202m',
@@ -32,6 +33,10 @@ function getTimestamp() {
     const seconds = date.getSeconds();
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
+=======
+
+const { getTimestamp, color } = require('./functions/utils.js');
+>>>>>>> upstream/main
 
 let client;
 try {
