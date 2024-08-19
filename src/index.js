@@ -11,7 +11,7 @@ const currentVersion = `${config.botVersion}`;
 
 // Logging Effects //
 
-const { getTimestamp, color } = require('./functions/utils.js');
+const { getTimestamp, color } = require('./utils/loggingEffects.js');
 
 let client;
 try {
