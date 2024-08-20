@@ -86,8 +86,8 @@ module.exports = {
                         .setFooter({ text: `🚑 ${client.user.username}'s help center: Adding bot`})
                         .setThumbnail(client.user.avatarURL())
                         .addFields({ name: `• How to add ${client.user.username} to your server`, value: `> To add ${client.user.username} to your server, simple click on the bots profile and click, \`\`add app\`\`.` })
-                        .addFields({ name: "• Wait.. what Official Discord server..", value: "> This is our Discord server: https://discord.gg/xcMVwAVjSD" })
-                        .addFields({ name: "• Our official website..", value: "> This is our official website: https://testify.lol "})
+                        .addFields({ name: "• Wait.. what Official Discord server..", value: "> This is our Discord server: https://discord.gg/HYxVxgmDt7" })
+                        .addFields({ name: "• Our official website..", value: "> This is our official website: **COMING SOON**"})
                         .setTimestamp();
 
                         interaction.update({ embeds: [howtoaddembed] }).catch(err);

@@ -6,7 +6,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName('help')
     .setDescription('Cannot find what you were wishing to? Check this out!')
-    .addSubcommand(command => command.setName('server').setDescription('Join our official support server for Orbit!'))
+    .addSubcommand(command => command.setName('server').setDescription('Join our official support server for Fifyx!'))
     .addSubcommand(command => command.setName('manual').setDescription('Get some information on our bot commands and plans.')),
     async execute(interaction, client) {
 
@@ -20,7 +20,7 @@ module.exports = {
                 new ButtonBuilder()
                 .setLabel('Support Server')
                 .setStyle(ButtonStyle.Link)
-                .setURL("https://discord.gg/xcMVwAVjSD")
+                .setURL("https://discord.gg/HYxVxgmDt7")
             )
         
 
@@ -32,7 +32,7 @@ module.exports = {
             .setAuthor({ name: `🚑 Help Command ${client.config.devBy}`})
             .setDescription(`> Join our official support server for ${client.user.username}! \n> Get help, report bugs, and more!`)
             .setThumbnail(client.user.avatarURL())
-            .addFields({ name: `Manual link to the Discord server:`, value: `> [SERVER INVITE](https://discord.gg/xcMVwAVjSD)`})
+            .addFields({ name: `Manual link to the Discord server:`, value: `> [SERVER INVITE](https://discord.gg/HYxVxgmDt7)`})
         
             await interaction.reply({ embeds: [embedHelpServer], components: [button] })
 

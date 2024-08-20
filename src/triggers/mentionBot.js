@@ -26,7 +26,7 @@ module.exports = {
             .setColor("Purple")
             .setTitle("🏓 • Who mentioned me??")
             .setDescription(`Hey there **${message.author.username}**!, here is some useful information about me.\n ⁉️ • **How to view all commands?**\nEither use **/help-manual** or do / to view a list of all the commands!`)
-            .addFields({ name: '**🌐 • Website:**', value: 'https://testify.lol/'})
+            .addFields({ name: '**🌐 • Website:**', value: '**COMING SOON**'})
             .addFields({ name: `**🏡 • Servers:**`, value: `${client.guilds.cache.size}`, inline: true })
             .addFields({ name: `**👥 • Users:**`, value: `${client.guilds.cache.reduce((a,b) => a+b.memberCount, 0)}`, inline: true})
             .addFields({ name: `**💣 • Commands:**`, value: `\`\`${client.commands.size}\`\` **Slash** & \`\`${client.pcommands.size}\`\` **Prefix**`, inline: true})
