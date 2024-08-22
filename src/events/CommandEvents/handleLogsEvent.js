@@ -45,7 +45,6 @@ function handleLogs(client) {
     
             if (message.attachments.size > 0) {
                 message.attachments.forEach(attachment => {
-                    // Prepare attachment-specific fields
                     let attachmentField;
                     if (attachment.contentType && attachment.contentType.startsWith('image/')) {
                         attachmentField = { name: `Attachment`, value: `[Image - Click to View](${attachment.url})` };
@@ -63,10 +62,8 @@ function handleLogs(client) {
                 });
             }
     
-            // Send the initial embed message with deletion details
             await send_log(message.guild.id, embed);
-    
-            // Send the second message with the attachments
+
             for (const { url, name } of attachmentMessages) {
                 await message.channel.send({ content: `**Deleted File:** ${name}`, files: [url] });
             }
