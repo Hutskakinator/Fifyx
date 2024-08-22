@@ -23,40 +23,60 @@ function handleLogs(client) {
     client.on("messageDelete", async function (message) {
         try {
             if (!message.guild || message.author.bot) return;
-            
+    
             const embed = new EmbedBuilder()
                 .setTitle(`${client.user.username} logging system ${client.config.arrowEmoji}`)
                 .setDescription(`${client.config.auditLogEmoji} __Message Deleted__`)
                 .setColor('DarkRed')
                 .setTimestamp()
-                .addFields({ name: `Author`, value: `> <@${message.author.id}> - *${message.author.tag}*`})
-                .addFields({ name: `Channel`, value: `> ${message.channel}`})
+                .addFields({ name: `Author`, value: `> <@${message.author.id}> - *${message.author.tag}*` })
+                .addFields({ name: `Channel`, value: `> ${message.channel}` })
                 .setThumbnail(client.user.avatarURL())
                 .setAuthor({ name: `Logging System ${client.config.devBy}` })
                 .setFooter({ text: `Message Deleted` });
-
+    
             if (message.content) {
                 embed.addFields({ name: `Deleted Message`, value: `> ${message.content}` });
             } else {
                 embed.addFields({ name: `Deleted Message`, value: '> [No text content]' });
             }
-
+    
+            const attachmentMessages = [];
+    
             if (message.attachments.size > 0) {
                 message.attachments.forEach(attachment => {
+                    // Prepare attachment-specific fields
+                    let attachmentField;
                     if (attachment.contentType && attachment.contentType.startsWith('image/')) {
-                        embed.addFields({ name: `Attachment`, value: `> Image` });
+                        attachmentField = { name: `Attachment`, value: `[Image - Click to View](${attachment.url})` };
                         embed.setImage(attachment.url);
+                    } else if (attachment.contentType && attachment.contentType.startsWith('video/')) {
+                        attachmentField = { name: `Attachment`, value: `[Video - Click to View](${attachment.url})` };
+                    } else if (attachment.contentType && attachment.contentType.startsWith('audio/')) {
+                        attachmentField = { name: `Attachment`, value: `[Audio - Click to Play](${attachment.url})` };
                     } else {
-                        embed.addFields({ name: `Attachment`, value: `> [Non-image attachment: ${attachment.name}]` });
+                        attachmentField = { name: `Attachment`, value: `[Download File: ${attachment.name}](${attachment.url})` };
                     }
+    
+                    embed.addFields(attachmentField);
+                    attachmentMessages.push({ url: attachment.url, name: attachment.name });
                 });
             }
- 
-            return send_log(message.guild.id, embed);
+    
+            // Send the initial embed message with deletion details
+            await send_log(message.guild.id, embed);
+    
+            // Send the second message with the attachments
+            for (const { url, name } of attachmentMessages) {
+                await message.channel.send({ content: `**Deleted File:** ${name}`, files: [url] });
+            }
         } catch (err) {
             client.logs.error(`[AUDIT_LOGGING] Couldn't log deleted message. Message content: ${message.content}`);
         }
     });
+    
+    
+    
     
 
     // Channel Topic Updating 
