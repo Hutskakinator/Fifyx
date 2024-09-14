@@ -34,15 +34,15 @@ module.exports = {
     embedVerify: "DarkGreen",
 
     // EMOJIS //
-    automodEmoji: "<:auto:1235660206856474704>",
-    modEmojiHard: "<a:mod:1235642403986083840>",
-    modEmojiLight: "<a:wompus:1235671799241510973>",
-    pepeCoffeeEmoji: "<:pepe:1238878395303989309>",
+    automodEmoji: "<:AutoModBadge:1254897035610558556>",
+    modEmojiHard: "<:olddiscordmod:1252267114174222498>",
+    modEmojiLight: "<:discordmod:1252267092095275042>",
+    pepeCoffeeEmoji: "<:pepeCoffee:1254897210928267347>",
     arrowEmoji: "⤵",
     errorEmoji: "❌",
     auditLogEmoji: "📋",
-    verifyEmoji: "<a:ver:1244732033339494450>",
-    countSuccessEmoji: "<a:tick:1235674049032486945>",
+    verifyEmoji: "<a:VerifiedTeal:1254897483004383322>",
+    countSuccessEmoji: "<:ffxcheck:1254447196536049674>",
 
     // MUSIC EMOJIS //
     musicEmojiPlay: "▶️",

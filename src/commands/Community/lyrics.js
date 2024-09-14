@@ -30,26 +30,27 @@ module.exports = {
         }
 
         const lyricEmbed = new EmbedBuilder()
-        .setTitle(`${client.user.username} Lyrics Tool ${client.config.arrowEmoji}`)
-        .setDescription(`**${song}** Lyrics: `)
-        .setColor(client.config.embedCommunity)
-        .setThumbnail(body.thumbnail.genius)
-        .setImage(body.thumbnail.genius)
-        .setURL(body.links.genius)
-        .setAuthor({ name: `Lyrics command ${client.config.devBy}`, iconURL: `${client.user.avatarURL()}`})
-        .addFields(
-            { name: "Title:", value: `${body.title}`, inline: true },
-            { name: "Artist:", value: `${body.author}`, inline: true },
-            ...lyricFields
-        )
-        .setFooter({ text: `Disclaimer - ${body.disclaimer}` })
-        .setTimestamp();
+    .setTitle(`${client.user.username} Lyrics Tool ${client.config.arrowEmoji}`)
+    .setDescription(`**${song}** Lyrics: `)
+    .setColor(client.config.embedCommunity)
+    .setThumbnail(body.thumbnail.genius)
+    .setImage(body.thumbnail.genius)
+    .setURL(body.links.genius)
+    .setAuthor({ name: `Lyrics command ${client.config.devBy}`, iconURL: client.user.avatarURL() || undefined })
+    .addFields(
+        { name: "Title:", value: `${body.title}`, inline: true },
+        { name: "Artist:", value: `${body.author}`, inline: true },
+        ...lyricFields
+    )
+    .setFooter({ text: `Disclaimer - ${body.disclaimer}` })
+    .setTimestamp();
+
 
         interaction.followUp({ embeds: [lyricEmbed] });
         
         } catch (error) {
             console.log(error);
-            interaction.followUp({ content: "An error occurred, try again later!", ephemeral: true });
+            interaction.followUp({ content: "Couldn't find the lyrics for the requested song. Please make sure the song name is correct and try again.", ephemeral: true });
         }
     },
 };
