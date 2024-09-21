@@ -9,6 +9,7 @@ lerna-debug.log*
 # Custom 
 
 src/logs/evalLogs.txt
+src/logs/chatLogs.txt
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
