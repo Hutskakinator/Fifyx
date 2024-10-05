@@ -169,6 +169,7 @@ client.giveawayManager = new GiveawaysManager(client, {
 });
 
 // Audit Logging System //
+<<<<<<< HEAD
 process.on('unhandledRejection', (reason, promise) => {
     console.log('Unhandled Rejection at:', promise, 'reason:', reason);
 });
@@ -176,6 +177,8 @@ process.on('unhandledRejection', (reason, promise) => {
 process.on("uncaughtException", (err) => {
     console.log("Uncaught Exception:", err);
 });
+=======
+>>>>>>> upstream/main
 
 Logs(client, {
     debug: true
