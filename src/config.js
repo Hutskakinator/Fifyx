@@ -2,16 +2,13 @@ module.exports = {
 	// BOT VERSION //
 	botVersion: "BETA-v1.2.0",
 
-    // BOT VERSION //
-    botVersion: "BETA-v1.1.1",
-    
     // BOT INFO //
     prefix: "?", // Default prefix
     status: "dnd",
     eventListeners: 100,
     dev: ".huts.",
     devBy: "| Developed by Huts",
-    developers: "980910907695722568",
+    developers: "1286030761002012673",
     noPerms: `You **do not** have the required permissions to use this command!`,
     ownerOnlyCommand: `This command is **only** available for the owner of the bot!`,
     filterMessage: "Your message includes profanity which is **not** allowed!",
