@@ -48,7 +48,7 @@ module.exports = {
                             Content: [
                                 {
                                     ExecuterId: '1211784897627168778',
-                                    ExecuterTag: 'Testify#0377',
+                                    ExecuterTag: 'Fifyx#0377',
                                     Reason: 'Use of forbidden links'
                                 }
                             ],
@@ -56,7 +56,7 @@ module.exports = {
                     } else {
                         const warnContent = {
                             ExecuterId: '1211784897627168778',
-                            ExecuterTag: 'Testify#0377',
+                            ExecuterTag: 'Fifyx#0377',
                             Reason: 'Use of forbidden links'
                         }
                         data.Content.push(warnContent);

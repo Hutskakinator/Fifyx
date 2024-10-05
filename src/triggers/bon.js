@@ -23,11 +23,7 @@ module.exports = {
         .setColor(config.embedModHard)
         .addFields({ name: 'User', value: `> ${user.tag}`, inline: true })
         .addFields({ name: 'Reason', value: `> ${reason}`, inline: true })
-<<<<<<< HEAD
-        .setFooter({ text: `Someone got got struck by the ban hammer` })
-=======
-        .setFooter({ text: `Someone got struck by the bon hammer` })
->>>>>>> upstream/main
+        .setFooter({ text: `Someone got struck by the ban hammer` })
         .setThumbnail(client.user.avatarURL())
         .setTimestamp()
         
