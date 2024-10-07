@@ -52,6 +52,7 @@ module.exports = {
 	musicEmojiRepeat: "🔁",
 	musicEmojiError: "❌",
 
+<<<<<<< HEAD
     // CHANNEL IDS //
     slashCommandLoggingChannel: "1255219987833163877", // slash command logging channel
     prefixCommandLoggingChannel: "1255219962080133200", // Prefix command logging channel
@@ -61,6 +62,13 @@ module.exports = {
     botJoinChannel: "1254897835304943717", // Logging channel for bot joining servers
     commandErrorChannel: "1273336191210754110", // Logging channel for command errors
     evalLogsChannel: "1273764268248010863",
+=======
+	// CHANNEL IDS //
+	botLeaveChannel: "1139731092329480332", // Logging channel for bot leaving servers
+	botJoinChannel: "1240480049681928203", // Logging channel for bot joining servers
+	commandErrorChannel: "1240912641719930970", // Logging channel for command errors
+	evalLogsChannel: "1273733451677306880",
+>>>>>>> upstream/main
 
     // Ticket Configuration //
     ticketName: 'ticket-',

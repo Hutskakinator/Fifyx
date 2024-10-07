@@ -68,7 +68,7 @@ function handleLogs(client) {
                 await message.channel.send({ content: `**Deleted File:** ${name}`, files: [url] });
             }
         } catch (err) {
-            client.logs.error(`[AUDIT_LOGGING] Couldn't log deleted message. Message content: ${message.content}`);
+            client.logs.error(`[AUDIT_LOGGING] Couldn't log deleted message. Message content: ${message.content ? message.content : 'cannot log embeds'}`);
         }
     });
     
