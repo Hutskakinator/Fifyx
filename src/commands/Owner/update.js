@@ -42,7 +42,7 @@ module.exports = {
         .setDescription('Developer of the update')
         .setRequired(true)
         .addChoices(
-          { name: 'Huts', value: '<@1286030761002012673>' },
+          { name: 'Huts', value: '<@980910907695722568>' },
           { name: 'Cat', value: '<@1286030761002012673>' },
           { name: 'Other', value: 'Other' },
         ))

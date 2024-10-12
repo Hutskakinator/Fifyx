@@ -6,13 +6,13 @@ module.exports = {
     prefix: "?", // Default prefix
     status: "dnd",
     eventListeners: 100,
-    dev: ".huts.",
-    devBy: "| Developed by Huts",
-    developers: "1286030761002012673",
+    dev: [".huts.", "cat_1072"],
+    devBy: "| Developed by Huts and Cat",
+    developers: ["1286030761002012673", "1286030761002012673"],
     noPerms: `You **do not** have the required permissions to use this command!`,
     ownerOnlyCommand: `This command is **only** available for the owner of the bot!`,
     filterMessage: "Your message includes profanity which is **not** allowed!",
-    botInvite: "https://discord.com/oauth2/authorize?client_id=1273317561747902515",
+    botInvite: "https://discord.com/oauth2/authorize?client_id=1251510890319057047",
     botServerInvite: "https://discord.gg/zFVTE5qkbp",
 
 	// EMBED COLORS //
