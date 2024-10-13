@@ -72,7 +72,7 @@ npm install
 ```
 
 ### Step 3: Set up your environment variables
-Rename the `.env.example` file to `.env` and fill in your bot token and other required info. For the development version, rename `.development.example.env` to `.env.development` and fill in the required info.
+Rename the `.example.env` file to `.env` and fill in your bot token and other required info. For the development version, rename `.development.example.env` to `.env.development` and fill in the required info.
 
 **Note**: API keys are __not__ required.
 
