@@ -1,85 +1,135 @@
-# Fifyx
-================
+# Fifyx Discord Bot
 
-Fifyx is a feature-rich Discord bot designed to enhance your server experience. With a variety of commands ranging from fun interactions to moderation tools, Fifyx aims to provide a seamless and engaging environment for users.
+<p align="center">
+  <img src="https://img.shields.io/github/issues/Hutskakinator/Pickle" alt="issues"/>
+  <img src="https://img.shields.io/github/forks/Hutskakinator/Pickle" alt="forks"/>
+  <img src="https://img.shields.io/github/stars/Hutskakinator/Pickle" alt="stars"/>
+  <img src="https://img.shields.io/github/license/Hutskakinator/Pickle" alt="license"/>
+  <img src="https://img.shields.io/github/last-commit/Hutskakinator/Pickle" alt="last-commit"/>
+</p>
 
-## Table of Contents
+<p align="center">
+  <strong>Fifyx</strong> is a feature-rich, customizable Discord bot that enhances your server experience, providing fun interactions, moderation tools, logging, and much more.
+</p>
+
+---
+
+## 📋 Table of Contents
 -----------------
-* [Features](#features)
-* [Installation](#installation)
-* [Commands](#commands)
-* [Configuration](#configuration)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Commands](#-commands)
+- [Configuration](#-configuration)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-## Features
+---
+
+## 🚀 Features
+------------
+- **Fun Commands**: Play games, enjoy trivia, and interact with users in entertaining ways.
+- **Moderation Tools**: Powerful moderation features to manage your server with ease.
+- **Customizable Prefix**: Adjust the bot's command prefix to match your server's preferences.
+- **Logging System**: Integrated logging system to track important server events like user joins, leaves, and moderation actions.
+- **User Profiles**: Allow users to create and manage their own profiles, adding a personalized touch to your server.
+
+---
+
+## 📜 Commands
 ------------
 
-* **Fun Commands**: Enjoy games, trivia, and fun interactions with users.
-* **Moderation Tools**: Manage your server efficiently with moderation commands.
-* **Customizable Prefix**: Change the command prefix to suit your server's needs.
-* **Logging System**: Keep track of important server events with an integrated logging system.
-* **User Profiles**: Users can create and manage their profiles with personalized information.
+Fifyx includes a total of **154 commands**, divided into two main categories: **Prefix Commands** and **Slash Commands**.
 
-## Commands
-------------
+### 🔑 Prefix Commands
+- **Community**: Engage with your community through games and fun interactions.
+- **Info**: Retrieve useful information about users, servers, roles, and more.
+- **Moderation**: Manage your server and enforce rules easily.
+- **Music**: Play music, manage queues, and create a lively server atmosphere.
+- **Miscellaneous**: Additional commands that offer utility and enhance the user experience.
 
-Fifyx includes a total of 154 commands, categorized into:
+### 🔧 Slash Commands
+- **Community**: Enjoy interactions tailored to a specific user or the whole community.
+- **Info**: Display stats, server details, and other informational commands.
+- **Moderation**: Quickly manage channels, members, and moderation tasks.
+- **Music**: Control music playback and queue in a simple, efficient manner.
+- **Miscellaneous**: Commands that don't fit elsewhere but add value to your server.
 
-### Prefix Commands
+---
 
-* **Community**: Commands for community engagement and fun.
-* **Info Commands**: Commands for retrieving information about users, servers, and more.
-* **Moderation Commands**: Commands for managing your server and enforcing rules.
-* **Music Commands**: Commands for music-related features.
-* **Other Commands**: Miscellaneous commands that don't fit into other categories.
-
-### Slash Commands
-
-* **Community**: Commands for community engagement and fun.
-* **Info Commands**: Commands for retrieving information about users, servers, and more.
-* **Moderation Commands**: Commands for managing your server and enforcing rules.
-* **Music Commands**: Commands for music-related features.
-* **Other Commands**: Miscellaneous commands that don't fit into other categories.
-
-## Installation
+## ⚙️ Installation
 ------------
 
 ### Step 1: Clone the repository
-git clone https://github.com/yourusername/Fifyx-2.0.git
+```bash
+git clone https://github.com/Hutskakinator/Pickle.git
 cd Fifyx
+```
 
 ### Step 2: Install dependencies
+```bash
 npm install
+```
 
 ### Step 3: Set up your environment variables
-Copy the `.env.example` file to `.env` and fill in your bot token and other necessary information.
+Copy the `.env.example` file to `.env` and fill in your bot token and other required info. For the development version, rename `.development.example.env` to `.env.development` and fill in the required info.
+
+**Note**: API keys are __not__ required.
 
 ### Step 4: Start the bot
-npm run start
+- **Normal mode**:  
+  ```bash
+  node .
+  ```
+- **Dev mode**:  
+  ```bash
+  npm run dev
+  ```
 
-## Configuration
+Make sure Node.js is installed on your system.
+
+---
+
+## ⚙️ Configuration
 -------------
+- **Prefix**: The default prefix is `?`, but you can change it with the `/change-prefix` command.
+- **Logging**: Set up your logging channel using the `/logs setup` command to track server activities.
 
-* **Prefix**: The default command prefix is ?. You can change it using the `/change-prefix` command.
-* **Logging**: Set up your logging channel using the `/logs setup` command.
+---
 
-## Contributing
+## 🤝 Contributing
 ------------
 
-We welcome contributions to improve Fifyx! If you have suggestions or want to fix bugs, please submit a pull request.
+We welcome contributions from the community! Whether you're fixing bugs or adding new features, we appreciate your help.
 
-## License
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a Pull Request.
+
+Check out the [issues page](https://github.com/Hutskakinator/Pickle/issues) for things to work on or suggest new ideas.
+
+---
+
+## 📄 License
+-------
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## 📞 Contact
 -------
 
-Fifyx is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+If you have any questions or need support, feel free to contact the developers:
 
-## Contact
--------
+- **Huts**: [Discord](https://discord.com/users/980910907695722568)
+- **Cat**: [Discord](https://discord.com/users/1286030761002012673)
+- [Fifyx Support Server](https://discord.gg/URfA6FZgHW)
 
-For any inquiries, please reach out to the developers:
+---
 
-* Huts: Discord
-* Cat: Discord
-* Fifyx support server: Discord
+## 🌟 Star History
+-------------
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Pickle&type=Date)](https://star-history.com/#Hutskakinator/Pickle)
