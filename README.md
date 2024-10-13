@@ -132,3 +132,4 @@ If you have any questions or need support, feel free to contact the developers:
 ## 🌟 Star History
 -------------
 
+[![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Pickle&type=Date)](https://star-history.com/#Hutskakinator/Pickle&Date)
