@@ -132,4 +132,3 @@ If you have any questions or need support, feel free to contact the developers:
 ## 🌟 Star History
 -------------
 
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=Z2l0aHViX3BhdF8xMUEySlFKT1EwS3NPTjE4N2JMTzFOX1ZkcTMwUDBFclpmSENjR1lqOTBHQXBWQWxIcUZrYWkzZUdTaXdPQUpMd3hJWE5TNVc3TW16dDEyNmU0#Hutskakinator/Pickle&Date" frameBorder="0"></iframe>
