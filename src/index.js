@@ -85,7 +85,7 @@ const commandFolders = fs.readdirSync("./src/commands");
     client.handleCommands(commandFolders, "./src/commands");
     client.prefixCommands(pcommandFolders, './src/prefix');
     
-    // Pass client to modUserEvent (Modified using AI.)
+
     require('./events/CommandEvents/modUserEvent')(client);
 
     client.login(process.env.token).then(() => {
