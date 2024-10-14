@@ -1,9 +1,8 @@
 const config = require('../../config');
-const fs = require('fs');
-const path = require('path');
 const mongoose = require('mongoose');
 const mongodbURL = process.env.mongodb;
-const { color, getTimestamp } = require('../../utils/loggingEffects.js');
+const folderLoader = require('../../utils/folderLoader.js');
+const asciiText = require('../../lib/asciiText.js')
 
 module.exports = {
     name: 'ready',
@@ -19,8 +18,10 @@ module.exports = {
             keepAlive: true,
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 10000,
         });
 
+<<<<<<< HEAD
         if (mongoose.connect) {
             client.logs.success('[DATABASE] Connected to MongoDB successfully.');
 
@@ -69,6 +70,10 @@ module.exports = {
         console.log(`${color.pink}[${getTimestamp()}] [BOT] Watching over ${client.guilds.cache.size} servers!`);
         console.log(`${color.pink}[${getTimestamp()}] ==================================`);
 
+=======
+        folderLoader(client);
+        asciiText(client)
+>>>>>>> upstream/main
         require('events').EventEmitter.defaultMaxListeners = config.eventListeners;
     },
 };
