@@ -26,7 +26,7 @@ module.exports = {
             .setAuthor({ name: `${client.user.username} Ban System`, iconURL: client.user.displayAvatarURL() })
             .setTitle(`${config.modEmojiHard} BAN ISSUED ${config.arrowEmoji}`)
             .setColor(config.embedModHard)
-            .setDescription(`A ban has been issued against a user.`)
+            .setDescription(`A very super real ban has been issued against a user.`)
             .addFields(
                 { name: 'Target User', value: `${user.tag} (${user.id})`, inline: true },
                 { name: 'Banned By', value: `${message.author.tag}`, inline: true },
@@ -34,7 +34,7 @@ module.exports = {
                 { name: 'Reason', value: reason }
             )
             .setThumbnail(user.displayAvatarURL({ dynamic: true }))
-            .setFooter({ text: `This is a ban for entertainment purposes only` })
+            .setFooter({ text: `This is a FAKE ban for entertainment purposes only` })
             .setTimestamp();
 
         const sentMessage = await message.reply({ embeds: [fakeBanEmbed]});
