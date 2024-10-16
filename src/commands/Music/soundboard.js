@@ -6,19 +6,16 @@ module.exports = {
         .setName('soundboard')
         .setDescription('Play a sound effect in your voice channel.')
         .setDefaultMemberPermissions(PermissionFlagsBits.UseSoundboard)
-        .addStringOption(option => option.setName('sound').setDescription('Your choice').setRequired(true)
-            .addChoices(
-                { name: 'Bruh', value: 'bruh' },
-                { name: 'Aw Shit', value: 'awShit' },
-                { name: 'Sad Violin', value: 'sadViolin' },
-                { name: 'Frog Sound', value: 'frog' },
-                { name: 'Air Horn', value: 'airHorn' },
-                { name: 'Funny Laugh', value: 'funnyLaugh' },
-                { name: 'Vine Boom', value: 'vineBoom' },
-                { name: 'Sad Trombone', value: 'sadTrombone' },
-                { name: 'Do It Again', value: 'doItAgain' },
-                { name: 'Yay', value: 'yay' }
-            )
+        .addStringOption(option => 
+            option.setName('sound')
+                .setDescription('Your choice')
+                .setRequired(true)
+                .addChoices(
+                    { name: 'Bruh', value: 'Bruh' },
+                    { name: 'Bye Bye Driver', value: 'ByeByeDriver' },
+                    { name: 'Thick of it', value:  'ThickOfIt' },
+                    { name: 'Aw Shit', value: 'awShit' }
+                )
         ),
     async execute(interaction, client) {
         const sound = interaction.options.getString('sound');
@@ -29,37 +26,14 @@ module.exports = {
 
         let audioURL;
 
-        switch (sound) {
-            case 'bruh':
-                audioURL = 'https://www.myinstants.com/media/sounds/movie_1_C2K5NH0.mp3';
-                break;
-            case 'awShit':
-                audioURL = 'https://www.myinstants.com/media/sounds/gta-san-andreas-ah-shit-here-we-go-again.mp3';
-                break;
-            case 'sadViolin':
-                audioURL = 'https://www.myinstants.com/media/sounds/sad-violin-1.mp3';
-                break;
-            case 'frog':
-                audioURL = 'https://www.myinstants.com/media/sounds/frog-sound.mp3';
-                break;
-            case 'airHorn':
-                audioURL = 'https://www.myinstants.com/media/sounds/airhorn-1.mp3';
-                break;
-            case 'funnyLaugh':
-                audioURL = 'https://www.myinstants.com/media/sounds/laughing-sound-effect.mp3';
-                break;
-            case 'vineBoom':
-                audioURL = 'https://www.myinstants.com/media/sounds/vine-boom.mp3';
-                break;
-            case 'sadTrombone':
-                audioURL = 'https://www.myinstants.com/media/sounds/sad-trombone-1.mp3';
-                break;
-            case 'doItAgain':
-                audioURL = 'https://www.myinstants.com/media/sounds/do-it-again.mp3';
-                break;
-            case 'yay':
-                audioURL = 'https://www.myinstants.com/media/sounds/yay.mp3';
-                break;
+        if (sound === 'Bruh') {
+            audioURL = 'https://www.myinstants.com/media/sounds/movie_1_C2K5NH0.mp3';
+        } else if (sound === 'awShit') {
+            audioURL = 'https://www.myinstants.com/media/sounds/gta-san-andreas-ah-shit-here-we-go-again.mp3';
+        } else if (sound === 'ByeByeDriver') {
+            audioURL = 'https://www.myinstants.com/media/sounds/bye-bye-driver.mp3';
+        } else if (sound === 'ThickOfIt') {
+            audioURL = 'https://www.myinstants.com/media/sounds/thick-of-it.mp3';
         }
 
         if (!interaction.member.voice.channel) {

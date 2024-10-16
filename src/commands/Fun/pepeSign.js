@@ -4,18 +4,19 @@ const filter = require("../../jsons/filter.json");
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName("pepe-sign")
-    .setDescription("Creates a pepe sign emoji")
-    .addStringOption(option => option.setName("text").setDescription("The text to put on the sign").setRequired(true)),
+        .setName("pepe-sign")
+        .setDescription("Creates a pepe sign emoji")
+        .addStringOption(option => option.setName("text").setDescription("The text to put on the sign").setRequired(true)),
     async execute(interaction, client) {
-        
+        await interaction.deferReply();
+
         const canvas = Canvas.createCanvas(200, 200);
         const ctx = canvas.getContext("2d");
         const blankSign = await Canvas.loadImage("https://i.postimg.cc/28bjZ4GW/pepesign.png");
         
         const signText = interaction.options.getString("text").trim();
 
-        if (filter.words.includes(signText)) return interaction.reply({ content: `${client.config.filterMessage}`, ephemeral: true});
+        if (filter.words.includes(signText)) return interaction.reply({ content: `${client.config.filterMessage}`, ephemeral: true });
 
         const maxLineWidth = 60;
         let lines = [];
@@ -52,9 +53,9 @@ module.exports = {
             .setColor(client.config.embedFun)
             .setTitle(`${client.user.username} Pepe Sign ${client.config.arrowEmoji}`)
             .setImage("attachment://pepesign.png")
-            .setFooter({ text: `Pepe sign created ${client.config.devBy}`})
+            .setFooter({ text: `Pepe sign created ${client.config.devBy}` })
             .setTimestamp();
 
-        interaction.reply({ content: `<@${interaction.user.id}>, here is your sign ${client.config.pepeCoffeeEmoji}`, embeds: [embed], files: [attachment] });
+        await interaction.editReply({ content: `<@${interaction.user.id}>, here is your sign ${client.config.pepeCoffeeEmoji}`, embeds: [embed], files: [attachment] });
     }
-}
+};
