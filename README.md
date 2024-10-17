@@ -1,15 +1,15 @@
 # Fifyx Discord Bot
 
 <p align="center">
-  <img src="https://img.shields.io/github/issues/Hutskakinator/Pickle" alt="issues"/>
-  <img src="https://img.shields.io/github/forks/Hutskakinator/Pickle" alt="forks"/>
-  <img src="https://img.shields.io/github/stars/Hutskakinator/Pickle" alt="stars"/>
-  <img src="https://img.shields.io/github/license/Hutskakinator/Pickle" alt="license"/>
-  <img src="https://img.shields.io/github/last-commit/Hutskakinator/Pickle" alt="last-commit"/>
+  <img src="https://img.shields.io/github/issues/Hutskakinator/Fifyx" alt="issues"/>
+  <img src="https://img.shields.io/github/forks/Hutskakinator/Fifyx" alt="forks"/>
+  <img src="https://img.shields.io/github/stars/Hutskakinator/Fifyx" alt="stars"/>
+  <img src="https://img.shields.io/github/license/Hutskakinator/Fifyx" alt="license"/>
+  <img src="https://img.shields.io/github/last-commit/Hutskakinator/Fifyx" alt="last-commit"/>
 </p>
 
 <p align="center">
-  <strong>Fifyx</strong> is a feature-rich, customizable Discord bot that enhances your server experience, providing fun interactions, moderation tools, logging, and much more.
+  <strong>Fifyx</strong> is a feature-rich, customizable Discord bot that enhances your server experience with fun interactions, powerful moderation tools, music playback, and much more.
 </p>
 
 ---
@@ -28,32 +28,37 @@
 
 ## 🚀 Features
 ------------
-- **Fun Commands**: Play games, enjoy trivia, and interact with users in entertaining ways.
-- **Moderation Tools**: Powerful moderation features to manage your server with ease.
-- **Customizable Prefix**: Adjust the bot's command prefix to match your server's preferences.
-- **Logging System**: Integrated logging system to track important server events like user joins, leaves, and moderation actions.
-- **User Profiles**: Allow users to create and manage their own profiles, adding a personalized touch to your server.
+- **Extensive Command Set**: Over 150 commands.
+- **Dual Command Systems**: Prefix and slash commands.
+- **Music System**: Play music, manage queues.
+- **Moderation Tools**: Efficient server management.
+- **Fun Interactions**: Games, trivia, community activities.
+- **Customizable Settings**: Adjustable prefix, configurable logging.
+- **User Profiles**: Personalized profiles within your server.
+- **Logging System**: Track server events and moderation actions.
 
 ---
 
 ## 📜 Commands
 ------------
 
-Fifyx includes a total of **154 commands**, divided into two main categories: **Prefix Commands** and **Slash Commands**.
+Fifyx boasts **154 commands** split between Prefix and Slash systems.
 
 ### 🔑 Prefix Commands
-- **Community**: Engage with your community through games and fun interactions.
-- **Info**: Retrieve useful information about users, servers, roles, and more.
-- **Moderation**: Manage your server and enforce rules easily.
-- **Music**: Play music, manage queues, and create a lively server atmosphere.
-- **Miscellaneous**: Additional commands that offer utility and enhance the user experience.
+- **Community**: Memes, animal facts, dad jokes.
+- **Info**: User info, server stats, bot information.
+- **Moderation**: Kick, ban, mute, warn systems.
+- **Music**: Play, queue, skip, and other controls.
+- **Economy**: Virtual currency and game systems.
+- **Fun**: IQ tests, ASCII art, entertainment commands.
 
 ### 🔧 Slash Commands
-- **Community**: Enjoy interactions tailored to a specific user or the whole community.
-- **Info**: Display stats, server details, and other informational commands.
-- **Moderation**: Quickly manage channels, members, and moderation tasks.
-- **Music**: Control music playback and queue in a simple, efficient manner.
-- **Miscellaneous**: Commands that don't fit elsewhere but add value to your server.
+- **Minigames**: Wordle, Connect4, 2048.
+- **Tickets**: Set up and manage ticket system.
+- **Verification**: Implement server verification.
+- **Profiles**: Create and manage user profiles.
+- **Prefix Settings**: Customize bot's prefix.
+- **Owner Commands**: Special bot management commands.
 
 ---
 
@@ -62,7 +67,7 @@ Fifyx includes a total of **154 commands**, divided into two main categories: **
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/Hutskakinator/Pickle.git
+git clone https://github.com/Hutskakinator/Fifyx.git
 cd Fifyx
 ```
 
@@ -108,7 +113,7 @@ We welcome contributions from the community! Whether you're fixing bugs or addin
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a Pull Request.
 
-Check out the [issues page](https://github.com/Hutskakinator/Pickle/issues) for things to work on or suggest new ideas.
+Check out the [issues page](https://github.com/Hutskakinator/Fifyx/issues) for things to work on or suggest new ideas.
 
 ---
 
@@ -125,11 +130,11 @@ If you have any questions or need support, feel free to contact the developers:
 
 - **Huts**: [Discord](https://discord.com/users/980910907695722568)
 - **Cat**: [Discord](https://discord.com/users/1286030761002012673)
-- [Fifyx Support Server](https://discord.gg/URfA6FZgHW)
+- **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
 
 ---
 
 ## 🌟 Star History
 -------------
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Pickle&type=Date)](https://star-history.com/#Hutskakinator/Pickle&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Fifyx&type=Date)](https://star-history.com/#Hutskakinator/Fifyx&Date)

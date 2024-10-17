@@ -42,7 +42,7 @@ module.exports = {
     auditLogEmoji: "📋",
     verifyEmoji: "<a:VerifiedTeal:1254897483004383322>",
     countSuccessEmoji: "<:ffxcheck:1254447196536049674>",
-	confettiEmoji: "",
+	confettiEmoji: "🎉",
 
 	// MUSIC EMOJIS //
 	musicEmojiPlay: "▶️",
