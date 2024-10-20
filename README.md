@@ -254,24 +254,22 @@ To set the advanced logs registry for the Fifyx audit-logs ( the event handler r
    4. To update the color of the logs, you can change the part `${color.pink}` to the color you'd like which are defined in the color variable. 
    5. That should be it, now when you start up the bot, it should look all cool 😎
 
-
-## License
 -------
+## License
+
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
----
+-------
 
 ## Contact
--------
+
 > If you have any questions or need support, feel free to contact the developers:
 >
 > - **Huts**: [Discord](https://discord.com/users/980910907695722568)
 > - **purritoz**: [Discord](https://discord.com/users/1286030761002012673)
 > - **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
 
----
 
 ## Star History
--------------
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Fifyx&type=Date)](https://star-history.com/#Hutskakinator/Fifyx&Date)
