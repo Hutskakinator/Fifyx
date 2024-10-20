@@ -259,7 +259,6 @@ To set the advanced logs registry for the Fifyx audit-logs ( the event handler r
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
--------
 
 ## Contact
 
