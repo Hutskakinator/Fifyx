@@ -1,30 +1,39 @@
-const { SlashCommandBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName('nitro')
-    .setDescription('Generates a random nitro link.'),
+        .setName('nitro')
+        .setDescription('Generates a random Nitro gift link.'),
     async execute(interaction) {
 
-        let letter = ['0','1','2','3','4','5','6','7','8','9','a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','f','F','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Z',]
-        let result = Math.floor(Math.random() * letter.length);
-        let result2 = Math.floor(Math.random() * letter.length);
-        let result3 = Math.floor(Math.random() * letter.length);
-        let result4 = Math.floor(Math.random() * letter.length);
-        let result5 = Math.floor(Math.random() * letter.length);
-        let result6 = Math.floor(Math.random() * letter.length);
-        let result7 = Math.floor(Math.random() * letter.length);
-        let result8 = Math.floor(Math.random() * letter.length);
-        let result9 = Math.floor(Math.random() * letter.length);
-        let result10 = Math.floor(Math.random() * letter.length);
-        let result11 = Math.floor(Math.random() * letter.length);
-        let result12 = Math.floor(Math.random() * letter.length);
-        let result13 = Math.floor(Math.random() * letter.length);
-        let result14 = Math.floor(Math.random() * letter.length);
-        let result15 = Math.floor(Math.random() * letter.length);
-        let result16 = Math.floor(Math.random() * letter.length);
-        
-        interaction.reply({ content: "Nitro gift sent to channel", ephemeral: true })
-        interaction.channel.send({ content: "http://discord.gift/" + letter[result] + letter[result2] + letter[result3] + letter[result4] + letter[result5] + letter[result6] + letter[result7] + letter[result8] + letter[result9] + letter[result10] + letter[result11] + letter[result12] + letter[result13] + letter[result14] + letter[result15] + letter[result16]})
+        const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let nitroCode = '';
+
+        for (let i = 0; i < 16; i++) {
+            nitroCode += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        const embed = new EmbedBuilder()
+            .setColor('#5865F2')
+            .setTitle('🎉 A Wild Nitro Gift Appears!')
+            .setDescription('**Nitro** is being delivered! Click the button to claim your gift.')
+            .setImage('https://i.imgur.com/w9aiGNt.png')
+            .setFooter({ text: 'Expires in 48 hours' });
+
+        const row = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setLabel('Claim')
+                    .setStyle(ButtonStyle.Link)
+                    .setURL(`https://discord.gift/${nitroCode}`)
+                    .setEmoji('🎁')
+            );
+
+        await interaction.reply({ content: "Nitro gift generated and sent to the channel!", ephemeral: true });
+
+        await interaction.channel.send({
+            embeds: [embed],
+            components: [row]
+        });
     }
 }
