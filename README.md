@@ -267,9 +267,10 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 > - **purritoz**: [Discord](https://discord.com/users/1286030761002012673)
 > - **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
 
-## ![Disclaimer Icon](https://img.icons8.com/ios-glyphs/30/808080/warning-shield.png) Disclaimer
+## <img src="https://img.icons8.com/ios-glyphs/20/808080/warning-shield.png" style="vertical-align: middle;"/> Disclaimer
 
-<span style="color: grey; font-size: 30%;">This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating changes and enhancements.</span>
+<span style="color: #808080; font-size: 90%;">This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating significant changes and enhancements.</span>
+
 
 ## Star History
 
