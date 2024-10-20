@@ -1,5 +1,7 @@
 # Fifyx Discord Bot
 
+<sub><sup>Disclaimer: This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating changes and improvements.</sup></sub>
+
 <p align="center">
   <img src="https://img.shields.io/github/issues/Hutskakinator/Fifyx" alt="issues"/>
   <img src="https://img.shields.io/github/forks/Hutskakinator/Fifyx" alt="forks"/>
@@ -14,84 +16,66 @@
 
 ---
 
-## 📋 Table of Contents
------------------
-- [Features](#-features)
-- [Installation](#-installation)
-- [Commands](#-commands)
-- [Configuration](#-configuration)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Setting-Audit-Logs](#Setting-up-audit-logs)
+- [Support](#support)
+- [License](#license)
 
----
+<h1 align="center"><strong>
+⭐ If your a fan of this repository or have used it or any of it's code, please consider leaving us a star. It would be greatly appreciated and allows us to see if users value the bot! ⭐
+</strong></h1>
 
-## 🚀 Features
-------------
-- **Extensive Command Set**: Over 150 commands.
-- **Dual Command Systems**: Prefix and slash commands.
-- **Music System**: Play music, manage queues.
-- **Moderation Tools**: Efficient server management.
-- **Fun Interactions**: Games, trivia, community activities.
-- **Customizable Settings**: Adjustable prefix, configurable logging.
-- **User Profiles**: Personalized profiles within your server.
-- **Logging System**: Track server events and moderation actions.
+## Installation
+- Download [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- Download [Visual Studio Code](https://code.visualstudio.com/download).
 
----
+## Usage
+- **Project Setup**
 
-## 📜 Commands
-------------
+    1. Fork the Github project :
+       1. Sign up / Sign in to [GitHub](https://github.com/).
+       2. Navigate to [Fifyx](https://github.com/Hutskakinator/Fifyx).
+       3. Click `Star` to support development.
+       4. Click `Fork` to copy all code to your own repository.
+   
+    2. Click the `Code` button. From the drop-down that appears, click `Download ZIP` to download the entire repository as a ZIP folder.
 
-Fifyx boasts **154 commands** split between Prefix and Slash systems.
+    3. Extract the files to a new folder and open it with [Visual Studio Code](https://code.visualstudio.com/download).
 
-### 🔑 Prefix Commands
-- **Community**: Memes, animal facts, dad jokes.
-- **Info**: User info, server stats, bot information.
-- **Moderation**: Kick, ban, mute, warn systems.
-- **Music**: Play, queue, skip, and other controls.
-- **Economy**: Virtual currency and game systems.
-- **Fun**: IQ tests, ASCII art, entertainment commands.
 
-### 🔧 Slash Commands
-- **Minigames**: Wordle, Connect4, 2048.
-- **Tickets**: Set up and manage ticket system.
-- **Verification**: Implement server verification.
-- **Profiles**: Create and manage user profiles.
-- **Prefix Settings**: Customize bot's prefix.
-- **Owner Commands**: Special bot management commands.
+- **Obtain Discord Bot Token**
 
----
+    1. Sign in to [Discord Developer Portal](https://discord.com/developers/applications).
 
-## ⚙️ Installation
-------------
+    2. Create a bot :
+        1. Enter the left side `Applications`.
+        2. Click `New Application` in the upper right corner and enter the name of the bot. After confirmation, enter the new page.
+        3. Click on the left side `Bot`.
+        4. Enable all intents listed under `Privileged Gateway Intents` and click `Save Changes`.
+        5. View and copy the token by clicking the `Reset Token` button.
+   
+    3. Set up OAuth2 :
+        1. Click on `OAuth2` in the left column.
+        2. Click on `URL Generator` in the left column.
+        3. In the right column, select `bot` and `applications.commands` under `SCOPES`.
+        4. Scroll down and select `Administrator` under `BOT PERMISSIONS`.
+        5. Copy the URL at the bottom and paste it into your browser.
+        6. Choose the server you want to add the bot to and click `Continue` > `Authorize`.
 
-### Step 1: Clone the repository
-```bash
-git clone https://github.com/Hutskakinator/Fifyx.git
-cd Fifyx
-```
 
-### Step 2: Install dependencies
-```bash
-npm install
-```
+- **Obtain MongoDB Connection String**
 
-### Step 3: Set up your environment variables
-Rename the `.example.env` file to `.env` and fill in your bot token and other required info. For the development version, rename `.development.example.env` to `.env.development` and fill in the required info.
+    1. Sign up / Sign in to [MongoDB](https://www.mongodb.com).
+    2. Choose your preferred cloud database plan.
+    3. Customize the cluster settings to your preference and click `Create Cluster`.
+    4. Navigate to the `Network Access` page, click `Add IP Address` and select `Allow access from anywhere`.
+    5. Navigate back to the `Database` page and click `Connect`.
+    6. Create a `database user`, click `Choose a connection method` and select `Connect your application`.
+    7. Copy your connection string and replace `<password>` with the password for the database user that you created earlier.
 
-**Note**: API keys are __not__ required.
 
-<<<<<<< HEAD
-### Step 4: Start the bot
-- **Normal mode**:  
-  ```bash
-  node .
-  ```
-- **Dev mode**:  
-  ```bash
-  npm run dev
-  ```
-=======
 - **Setting up the env file**
 
     *If you go along with this, you can ignore the parts in the `Project Execution` that explain how to generate and fill in the `.env`*
@@ -105,23 +89,28 @@ Rename the `.example.env` file to `.env` and fill in your bot token and other re
 
 
 - **Project Execution**
->>>>>>> upstream/main
 
-Make sure Node.js is installed on your system.
+    1. Rename the filed named `example.env` to `.env`
+    2. Navigate to the `Bot` page on the [Discord Developer Portal](https://discord.com/developers/applications) and click `Reset Token`. Afterwards, create a `.env` file within the root directory.
+    3. Paste your bot token into the `token` variable inside the `.env` file.
+    4. Paste your [MongoDB](https://www.mongodb.com) connection string into the `mongodb` variable inside the `.env` file.
+    5. Navigate to the `OAuth2` page and copy the `CLIENT ID`. 
+    6. Paste your client ID into the `clientid` variable inside the `.env` file.
+    7. Navigate to your discord server, enable developer mode and right click the dropdown beside the server name. 
+    8. Click `Copy Server ID` and paste it into the `guildid` variable inside the `.env` file.
+    9. Navigate to the `package.json` file and pay attention to the runnable commands listed under `scripts`.
+    10. Open the terminal in [Visual Studio Code](https://code.visualstudio.com/download) and install all necessary packages using `npm run setup`. This will install the dependencies and give you a brief install guide
+    11. Open a new terminal and type `npm run prod` to run the file without using [nodemon](https://www.npmjs.com/package/nodemon) or `npm run prod:nodemon` to run the bot with [nodemon](https://www.npmjs.com/package/nodemon).
+    12. The bot should then turn online, you should be able to see this by the console logs that is setup upon start up
 
----
+- **Runnable commands (scripts)**
 
-## ⚙️ Configuration
--------------
-- **Prefix**: The default prefix is `?`, but you can change it with the `/change-prefix` command.
-- **Logging**: Set up your logging channel using the `/logs setup` command to track server activities.
+   **Wipe Database** - <br>
+   To wipe the database that is connected via your mongoDB url, you can run the command `npm run wipe-data:prod`, this brings up a menu which you can follow in order to either wipe the entire database from all it's data, or wipe all the data from individual schemas. 
 
----
+   **Update Packages** - <br>
+   To update all your dependencies, you can run the command `npm run update-packages`, this cycles through the dependencies and updates one's which are out of date.
 
-<<<<<<< HEAD
-## 🤝 Contributing
-------------
-=======
    **update-ytdl-core** - <br>
    To update the version of the `ytdl-core` package, you can run the command `npm run update-ytdl-core`, this updates the package to the most recent version to ensure the music system works.
 
@@ -132,38 +121,157 @@ Make sure Node.js is installed on your system.
    To run the setup of the `.env.development` file you can run the command `npm run setup-env:dev`, this generates a script in the console that generates a `.env.development` file and where you fill out the fields with whats required for the `.env.development` file and it writes it in the file.
 
 ## Setting-up-audit-logs
->>>>>>> upstream/main
 
-We welcome contributions from the community! Whether you're fixing bugs or adding new features, we appreciate your help.
+To set the advanced logs registry for the Fifyx audit-logs ( the event handler registers ) than follow this!
 
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a Pull Request.
+   1. Navigate to `node_modules` **=>** `discord-logs` **=>** `lib` **=>** `index.js` 
+   2. Once in the `index.js` file for the discord logs package you'll want to **copy and paste** this code in below.
 
-Check out the [issues page](https://github.com/Hutskakinator/Fifyx/issues) for things to work on or suggest new ideas.
+   ```js
+    "use strict";
+    var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+        function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    };
 
----
+    const color = {
+        red: '\x1b[31m',
+        orange: '\x1b[38;5;202m',
+        yellow: '\x1b[33m',
+        green: '\x1b[32m',
+        blue: '\x1b[34m',
+        reset: '\x1b[0m',
+        pink: '\x1b[38;5;213m'
+    }
 
-## 📄 License
+    function getTimestamp() {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
+    const discord_js_1 = require("discord.js");
+    const handlers_1 = require("./handlers");
+    let eventRegistered = false;
+    module.exports = (client, options) => __awaiter(void 0, void 0, void 0, function* () {
+        if (eventRegistered)
+            return;
+        eventRegistered = true;
+        const intents = new discord_js_1.IntentsBitField(client.options.intents);
+        /* HANDLE GUILDS EVENTS */
+        if (intents.has(discord_js_1.IntentsBitField.Flags.Guilds)) {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] ChannelUpdate event handler registered.`);
+            client.on('channelUpdate', (oldChannel, newChannel) => {
+                (0, handlers_1.handleChannelUpdateEvent)(client, oldChannel, newChannel);
+            });
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] GuildUpdate event handler registered.`);
+            client.on('guildUpdate', (oldGuild, newGuild) => {
+                (0, handlers_1.handleGuildUpdateEvent)(client, oldGuild, newGuild);
+            });
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] RoleUpdate event handler registered.`);
+            client.on('roleUpdate', (oldRole, newRole) => {
+                (0, handlers_1.handleRoleUpdateEvent)(client, oldRole, newRole);
+            });
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] ThreadUpdate event handler registered.`);
+            client.on('threadUpdate', (oldThread, newThread) => {
+                (0, handlers_1.handleThreadChannelUpdateEvent)(client, oldThread, newThread);
+            });
+        }
+        else {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`channelUpdate, guildUpdate, roleUpdate and threadUpdate event handlers not registered (missing Guilds intent).`);
+        }
+        /* HANDLE MEMBER EVENTS */
+        if (intents.has(discord_js_1.IntentsBitField.Flags.GuildMembers)) {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] GuildMemberUpdate event handler registered.`);
+            client.on('guildMemberUpdate', (oldMember, newMember) => {
+                (0, handlers_1.handleGuildMemberUpdateEvent)(client, oldMember, newMember);
+            });
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] UserUpdate event handler registered.`);
+            client.on('userUpdate', (oldUser, newUser) => {
+                (0, handlers_1.handleUserUpdateEvent)(client, oldUser, newUser);
+            });
+        }
+        else {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log('guildMemberUpdate, userUpdate event handlers not registered (missing GuildMembers intent).');
+        }
+        /* HANDLE MESSAGE UPDATE EVENTS */
+        if (intents.has(discord_js_1.IntentsBitField.Flags.GuildMessages && discord_js_1.IntentsBitField.Flags.MessageContent)) {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] MessageUpdate event handler registered.`);
+            client.on('messageUpdate', (oldMessage, newMessage) => {
+                (0, handlers_1.handleMessageUpdateEvent)(client, oldMessage, newMessage);
+            });
+        }
+        else {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log('messageUpdate event handler not registered (missing GuildMessages or MessageContent intent).');
+        }
+        /* HANDLE PRESENCE UPDATE EVENTS */
+        if (intents.has(discord_js_1.IntentsBitField.Flags.GuildPresences)) {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] PresenceUpdate event handler registered.`);
+            client.on('presenceUpdate', (oldPresence, newPresence) => {
+                (0, handlers_1.handlePresenceUpdateEvent)(client, oldPresence, newPresence);
+            });
+        }
+        else {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log('presenceUpdate event handler not registered (missing GuildPresences intent).');
+        }
+        /* HANDLE VOICE STATE UPDATE */
+        if (intents.has(discord_js_1.IntentsBitField.Flags.GuildVoiceStates)) {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log(`${color.pink}[${getTimestamp()}] ${color.reset}[AUDIT_LOGS] VoiceStateUpdate event handler registered.`);
+            client.on('voiceStateUpdate', (oldState, newState) => {
+                (0, handlers_1.handleVoiceStateUpdateEvent)(client, oldState, newState);
+            });
+        }
+        else {
+            if (options === null || options === void 0 ? void 0 : options.debug)
+                console.log('voiceStateUpdate event handler not registered (missing GuildVoiceStates intent).');
+        }
+    });
+   ```
+   3. This code makes the logs register like so this image below <img align="center" alt="Audit-logs" src="https://i.postimg.cc/NMJfsy0V/Screenshot-2024-10-07-184919.png">
+   4. To update the color of the logs, you can change the part `${color.pink}` to the color you'd like which are defined in the color variable. 
+   5. That should be it, now when you start up the bot, it should look all cool 😎
+
+
+## License
 -------
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
-## 📞 Contact
+## Contact
 -------
-
-If you have any questions or need support, feel free to contact the developers:
-
-- **Huts**: [Discord](https://discord.com/users/980910907695722568)
-- **Cat**: [Discord](https://discord.com/users/1286030761002012673)
-- **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
+> If you have any questions or need support, feel free to contact the developers:
+>
+> - **Huts**: [Discord](https://discord.com/users/980910907695722568)
+> - **purritoz**: [Discord](https://discord.com/users/1286030761002012673)
+> - **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
 
 ---
 
-## 🌟 Star History
+## Star History
 -------------
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Hutskakinator/Fifyx&type=Date)](https://star-history.com/#Hutskakinator/Fifyx&Date)
