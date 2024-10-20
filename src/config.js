@@ -1,6 +1,6 @@
 module.exports = {
 	// BOT VERSION //
-	botVersion: "BETA-v1.2.0",
+	botVersion: "BETA-v1.2.2",
 
     // BOT INFO //
     prefix: "?", // Default prefix

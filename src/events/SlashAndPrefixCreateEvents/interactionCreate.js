@@ -40,6 +40,11 @@ module.exports = {
             console.error(`${color.red}[${getTimestamp()}] [INTERACTION_CREATE] Error while executing command. \n${color.red}[${getTimestamp()}] [INTERACTION_CREATE] Please check you are using the correct execute method: "async execute(interaction, client)": \n${color.red}[${getTimestamp()}] [INTERACTION_CREATE]`, error);
 
             const channelID = `${client.config.commandErrorChannel}`;
+            if (!channelID) {
+                console.error(`${color.red}[${getTimestamp()}] [INTERACTION_CREATE] No command error channel ID provided. Please provide a valid channel ID in the config.js file.`);
+                return;
+            }
+
             const channel = client.channels.cache.get(channelID);   
 
             const embed = new EmbedBuilder()
@@ -56,17 +61,17 @@ module.exports = {
             { name: '> Error', value: `\`\`\`${error}\`\`\`` })
             
             const yellowButton = new ButtonBuilder()
-                .setCustomId('change_color_yellow')
+                .setCustomId('change_color_yellow_slash')
                 .setLabel('Mark As Pending')
                 .setStyle('1');
             
             const greenButton = new ButtonBuilder()
-                .setCustomId('change_color_green')
+                .setCustomId('change_color_green_slash')
                 .setLabel('Mark As Solved')
                 .setStyle('3');
             
             const redButton = new ButtonBuilder()
-                .setCustomId('change_color_red')
+                .setCustomId('change_color_red_slash')
                 .setLabel('Mark As Unsolved')
                 .setStyle('4');
             

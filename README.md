@@ -81,6 +81,7 @@ Rename the `.example.env` file to `.env` and fill in your bot token and other re
 
 **Note**: API keys are __not__ required.
 
+<<<<<<< HEAD
 ### Step 4: Start the bot
 - **Normal mode**:  
   ```bash
@@ -90,6 +91,21 @@ Rename the `.example.env` file to `.env` and fill in your bot token and other re
   ```bash
   npm run dev
   ```
+=======
+- **Setting up the env file**
+
+    *If you go along with this, you can ignore the parts in the `Project Execution` that explain how to generate and fill in the `.env`*
+
+    1. For easy setup of the env files, ( `.env` & `.development.env` ) you can run the command `npm run setup-env:prod`
+    2. Once you've ran the command, it generates a script in the console
+    3. You need to then fill out the fields in the console. Fields marked with the text **"Required"** are you required fields and you need to fill those ones in. The script will not continue if you ignore to fill in those fields. 
+    4. Once you've filled in the field, it will write those fields into and generate the `.env`.
+    5. Alternatively, you can ignore this and fill in the fields yourself by viewing the `.example.env` file.
+    6. If you then want to setup the `.env.development` file, you can run the command `npm run setup-env:dev` and follow the steps above again.
+
+
+- **Project Execution**
+>>>>>>> upstream/main
 
 Make sure Node.js is installed on your system.
 
@@ -102,8 +118,21 @@ Make sure Node.js is installed on your system.
 
 ---
 
+<<<<<<< HEAD
 ## 🤝 Contributing
 ------------
+=======
+   **update-ytdl-core** - <br>
+   To update the version of the `ytdl-core` package, you can run the command `npm run update-ytdl-core`, this updates the package to the most recent version to ensure the music system works.
+
+   **setup-env:prod** - <br>
+   To run the setup of the `.env` file you can run the command `npm run setup-env:prod`, this generates a script in the console that generates a `.env` file and where you fill out the fields with whats required for the `.env` file and it writes it in the file.
+
+   **setup-env:dev** - <br>
+   To run the setup of the `.env.development` file you can run the command `npm run setup-env:dev`, this generates a script in the console that generates a `.env.development` file and where you fill out the fields with whats required for the `.env.development` file and it writes it in the file.
+
+## Setting-up-audit-logs
+>>>>>>> upstream/main
 
 We welcome contributions from the community! Whether you're fixing bugs or adding new features, we appreciate your help.
 

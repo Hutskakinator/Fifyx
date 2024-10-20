@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 const { Client, GatewayIntentBits, EmbedBuilder, Collection, Partials } = require('discord.js');
+=======
+
+// ████████╗███████╗███████╗████████╗██╗███████╗██╗   ██╗
+// ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝██║██╔════╝╚██╗ ██╔╝
+//    ██║   █████╗  ███████╗   ██║   ██║█████╗   ╚████╔╝ 
+//    ██║   ██╔══╝  ╚════██║   ██║   ██║██╔══╝    ╚██╔╝  
+//    ██║   ███████╗███████║   ██║   ██║██║        ██║   
+//    ╚═╝   ╚══════╝╚══════╝   ╚═╝   ╚═╝╚═╝        ╚═╝   
+
+// Developed by: Kkermit. All rights reserved. (2024)
+// MIT License
+
+const { Client, GatewayIntentBits, Collection, Partials } = require(`discord.js`);
+>>>>>>> upstream/main
 const fs = require('fs');
 const config = require('./config');
 
@@ -53,13 +68,19 @@ client.logs = require('./utils/logs');
 client.config = require('./config');
 
 // Packages //
+<<<<<<< HEAD
 const { DisTube } = require("distube");
 const { SpotifyPlugin } = require('@distube/spotify');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
 const { YtDlpPlugin } = require('@distube/yt-dlp');
 const GiveawaysManager = require("./utils/giveaway");
+=======
+
+const giveawayClient = require('./client/giveawayClientEvent.js')
+const distubeClient = require('./client/distubeClientEvent.js')
+const auditLogsClient = require('./client/auditLogsClientEvent.js')
+>>>>>>> upstream/main
 const { handleLogs } = require("./events/CommandEvents/handleLogsEvent");
-const Logs = require('discord-logs');
 const { checkVersion } = require('./lib/version');
 
 require('./functions/processHandlers')();
@@ -76,6 +97,12 @@ const eventFiles = fs.readdirSync("./src/events");
 const pcommandFolders = fs.readdirSync('./src/prefix');
 const commandFolders = fs.readdirSync("./src/commands");
 
+const token = process.env.token;
+if (!token) {
+    console.log(`${color.red}[${getTimestamp()}]${color.reset} [TOKEN] No token provided. Please provide a valid token in the .env file. ${config.botName} cannot launch without a token.`);
+    return;
+}
+
 (async () => {
     for (const file of functions) {
         require(`./functions/${file}`)(client);
@@ -84,18 +111,24 @@ const commandFolders = fs.readdirSync("./src/commands");
     client.handleTriggers(triggerFiles, "./src/triggers");
     client.handleCommands(commandFolders, "./src/commands");
     client.prefixCommands(pcommandFolders, './src/prefix');
+<<<<<<< HEAD
     
 
     require('./events/CommandEvents/modUserEvent')(client);
 
     client.login(process.env.token).then(() => {
         handleLogs(client);
+=======
+    client.login(token).then(() => {
+        handleLogs(client)
+>>>>>>> upstream/main
         checkVersion(currentVersion);
     }).catch((error) => {
         console.error(`${color.red}[${getTimestamp()}]${color.reset} [LOGIN] Error while logging in. Check if your token is correct or double check you're also using the correct intents. \n${color.red}[${getTimestamp()}]${color.reset} [LOGIN]`, error);
     });
 })();
 
+<<<<<<< HEAD
 // Music System //
 client.distube = new DisTube(client, {
     leaveOnStop: false,
@@ -173,3 +206,10 @@ client.giveawayManager = new GiveawaysManager(client, {
 Logs(client, {
     debug: true
 });
+=======
+// Client Loader //
+
+distubeClient(client);
+giveawayClient(client);
+auditLogsClient(client);
+>>>>>>> upstream/main

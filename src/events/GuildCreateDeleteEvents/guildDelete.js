@@ -6,7 +6,15 @@ module.exports = {
     async execute (guild, client) {
     const logchannelid = client.config.botLeaveChannel;
 
+    if (!logchannelid) {
+        client.logs.error(`[GUILD_DELETE] No log channel ID provided. Please provide a valid channel ID in the config.js file.`);
+        return;
+    }
+
     let theowner = process.env.devid;
+    if (!theowner) {
+        client.logs.warn(`[GUILD_CREATE] No owner ID provided. Please provide a valid owner ID in the .env file.`);
+    }
 
     await guild.fetchOwner().then(({ user }) => { theowner = user; }).catch(() => {});
 
@@ -26,6 +34,6 @@ module.exports = {
     const LogChannel = client.channels.cache.get(logchannelid) || await client.channels.fetch(logchannelid).catch(() => {}) || false;
     if (LogChannel) LogChannel.send({ embeds: [embed] }).catch(console.warn);
 
-    console.log(`${color.blue}[${getTimestamp()}]${color.reset} [GUILD_DELETE] ${client.user.username} has left a guild. \n${color.blue}> GuildName: ${guild.name} \n> GuildID: ${guild.id} \n> Owner: ${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`} \n> MemberCount: ${guild.memberCount}`)
+    console.log(`${color.blue}[${getTimestamp()}]${color.reset} [GUILD_DELETE] ${client.user.username} has left a guild. \n${color.blue}> GuildName: ${guild.name} \n> GuildID: ${guild.id} \n> Owner: ${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`} \n> MemberCount: ${guild.memberCount} ${color.reset}`);
     }
 }
