@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const voiceSchema = require('../../schemas/voiceChannelMembersSystem');
+const voiceSchema = require('../../schemas/voiceSchemas/voiceChannelMembersSystem');
 
 module.exports = {
     name: Events.GuildMemberAdd,

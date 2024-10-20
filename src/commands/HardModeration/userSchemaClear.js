@@ -2,11 +2,20 @@ const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits, PermissionsBitFi
 const fs = require('fs');
 const path = require('path');
 
-const schemaNames = fs.readdirSync(path.join(__dirname, '../../schemas'))
-    .filter(file => file.endsWith('.js'))
-    .map(file => file.slice(0, -3)); 
+const schemaNames = [
+    ...fs.readdirSync(path.join(__dirname, '../../schemas'))
+        .filter(file => file.endsWith('.js'))
+        .map(file => file.slice(0, -3)),
+    ...fs.readdirSync(path.join(__dirname, '../../schemas/voiceSchemas'))
+        .filter(file => file.endsWith('.js'))
+        .map(file => `VoiceSchemas/${file.slice(0, -3)}`) // Add the folder prefix
+];
 
-const choices = schemaNames.map(name => ({ name, value: name }));
+
+const MAX_CHOICES = 25; 
+
+const choices = schemaNames.slice(0, MAX_CHOICES).map(name => ({ name, value: name }));
+
 
 const commandData = new SlashCommandBuilder()
     .setName('wipe-user-data')

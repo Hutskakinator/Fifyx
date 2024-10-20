@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const botSchema = require('../../schemas/voiceChannelBotSystem');
+const botSchema = require('../../schemas/voiceSchemas/voiceChannelBotSystem');
 
 module.exports = {
     name: Events.GuildMemberRemove,

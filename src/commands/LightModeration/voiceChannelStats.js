@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, ChannelType, PermissionsBitField, PermissionFlagsBits } = require('discord.js');
-const voiceSchema = require('../../schemas/voiceChannelMembersSystem');
-const botSchema = require('../../schemas/voiceChannelBotSystem');
+const voiceSchema = require('../../schemas/voiceSchemas/voiceChannelMembersSystem');
+const botSchema = require('../../schemas/voiceSchemas/voiceChannelBotSystem');
 
 module.exports = {
     data: new SlashCommandBuilder()
