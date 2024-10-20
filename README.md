@@ -1,8 +1,5 @@
 # Fifyx Discord Bot
 
-## ![Disclaimer Icon](https://img.icons8.com/ios-glyphs/30/808080/warning-shield.png) Disclaimer
-
-<span style="color: grey; font-size: 60%;">This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating changes and enhancements.</span>
 
 <p align="center">
   <img src="https://img.shields.io/github/issues/Hutskakinator/Fifyx" alt="issues"/>
@@ -270,6 +267,9 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 > - **purritoz**: [Discord](https://discord.com/users/1286030761002012673)
 > - **Fifyx Support Server**: [Discord](https://discord.gg/URfA6FZgHW)
 
+## ![Disclaimer Icon](https://img.icons8.com/ios-glyphs/30/808080/warning-shield.png) Disclaimer
+
+<span style="color: grey; font-size: 30%;">This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating changes and enhancements.</span>
 
 ## Star History
 
