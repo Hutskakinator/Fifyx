@@ -1,6 +1,8 @@
 # Fifyx Discord Bot
 
-<sub><sup>Disclaimer: This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating changes and improvements.</sup></sub>
+## ![Disclaimer Icon](https://img.icons8.com/ios-glyphs/30/808080/warning-shield.png) Disclaimer
+
+<span style="color: grey; font-size: 90%;">This repository is a modified fork of [Kkkermit's Testify](https://github.com/Kkkermit/Testify), incorporating significant changes and enhancements.</span>
 
 <p align="center">
   <img src="https://img.shields.io/github/issues/Hutskakinator/Fifyx" alt="issues"/>
