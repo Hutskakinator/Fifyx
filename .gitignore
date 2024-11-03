@@ -12,6 +12,8 @@ src/logs/evalLogs.txt
 src/logs/chatLogs.txt
 src/triggers/ssu.js
 src/triggers/hcord.js
+src/triggers/43r.js
+src/triggers/cr7.js
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
